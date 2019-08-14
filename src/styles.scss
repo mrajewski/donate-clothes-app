@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700&display=swap&subset=latin-ext');
+@import "./sass/yellow";
 
 $fontColor: #3C3D3D;
 
@@ -10,6 +11,7 @@ $fontColor: #3C3D3D;
   color: $fontColor;
 }
 
+
 // Header styles
 .header-main {
   height: 100vh;
@@ -17,6 +19,7 @@ $fontColor: #3C3D3D;
   min-height: 600px;
   width: 100%;
   min-width: 1350px;
+  margin: 0 auto;
   background-image: url("./img/header_start_img.jpg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -28,7 +31,6 @@ $fontColor: #3C3D3D;
   position: relative;
 
   @media (max-width: 1500px){
-    //background-size: cover;
     max-height: 700px;
 
   }
@@ -40,7 +42,7 @@ $fontColor: #3C3D3D;
 
   .header-section {
     width: 750px;
-    margin-right: 7%;
+    margin-right: 5%;
     margin-bottom: 20vh;
 
     h1 {
