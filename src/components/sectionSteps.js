@@ -1,4 +1,5 @@
-import React, {Component} from 'react';import {
+import React, {Component} from 'react';
+import {
     HashRouter,
     Route,
     Link,
@@ -29,25 +30,25 @@ render() {
             <div className="decoration-steps"></div>
             <article className='steps-container'>
                 <div className="step-el">
-                    <p>Wybierz rzeczy</p>
+                    <h2>Wybierz rzeczy</h2>
                     <hr/>
                     <p>ubrania,zabawki,sprzęt i inne</p>
 
                 </div>
                 <div className="step-el">
-                    <p>Spakuj je</p>
+                    <h2>Spakuj je</h2>
                     <hr/>
                     <p>skorzystaj z worków naśmieci</p>
 
                 </div>
                 <div className="step-el">
-                    <p>Zdecyduj komu chcesz pomóc</p>
+                    <h2>Zdecyduj komu chcesz pomóc</h2>
                     <hr/>
                     <p>wybierz zaufane miejsce</p>
 
                 </div>
                 <div className="step-el">
-                    <p>Zamów kuriera</p>
+                    <h2>Zamów kuriera</h2>
                     <hr/>
                     <p>kurier przyjedzie w dowolnym terminie</p>
 

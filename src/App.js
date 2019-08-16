@@ -12,6 +12,7 @@ import "./styles.scss";
 import Header from './components/header'
 import Yellow from './components/sectionYellow'
 import Steps from './components/sectionSteps'
+import About from './components/about'
 
 
 class App extends Component {
@@ -22,6 +23,7 @@ class App extends Component {
                     <Header/>
                     <Yellow/>
                     <Steps/>
+                    <About/>
                     <Route path='/'/>
                     <Route path='/'/>
                 </HashRouter>
