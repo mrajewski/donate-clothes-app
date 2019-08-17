@@ -13,6 +13,7 @@ import Header from './components/header'
 import Yellow from './components/sectionYellow'
 import Steps from './components/sectionSteps'
 import About from './components/about'
+import Fundations from './components/fundations'
 
 
 class App extends Component {
@@ -24,6 +25,7 @@ class App extends Component {
                     <Yellow/>
                     <Steps/>
                     <About/>
+                    <Fundations/>
                     <Route path='/'/>
                     <Route path='/'/>
                 </HashRouter>
