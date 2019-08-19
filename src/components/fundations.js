@@ -45,25 +45,33 @@ class Fundations extends Component {
                 goal: 'Pomoc dzieciom z ubogich rodzin',
                 items: 'ubrania, meble, zabawki'
             },
+            {
+                name: `Fundacja "Dla seniorów"`,
+                goal: 'Pomoc samotnym seniorom',
+                items: 'sprzęt AGD, meble, jedzenie, koce, ubrania'
+            }
         ],
         currentPage: 1,
         orgPerPage: 3,
-        orgSelect: 'fund'
+        orgSelect: 'fund',
+        pagiActive: '1'
 
 
     };
 
     onClickFund = (e) => {
         this.setState({
-            orgSelect: e.target.key
+            orgSelect: e.target.id
 
-        })
+        });
+
 
     };
 
     handleClick = (event) =>{
         this.setState({
-            currentPage: Number(event.target.id)
+            currentPage: Number(event.target.id),
+            pagiActive: event.target.id
         });
     };
 
@@ -80,9 +88,9 @@ class Fundations extends Component {
                     <li className={'org-el'} key={index}>
                         <div>
                             <h3>{org.name}</h3>
-                            <p>Cel i misja: {org.goal}</p>
+                            <p className='org-goal'>Cel i misja: {org.goal}</p>
                         </div>
-                        <p>{org.items}</p>
+                        <p className='org-items'>{org.items}</p>
                     </li>
 
             );
@@ -96,10 +104,11 @@ class Fundations extends Component {
 
         const renderPageNumbers = pageNumbers.map(number => {
             return (
-                <li
+                <li className='pagination'
                     key={number}
                     id={number}
                     onClick={this.handleClick}
+                    style={this.state.pagiActive===number.toString()?{border: '1px solid black'}:null}
                 >
                     {number}
                 </li>
@@ -111,14 +120,14 @@ class Fundations extends Component {
 
         return (
             <section className='fundation-list'>
-                <h1>Komu Pomagamy?</h1>
+                <h1>Komu pomagamy?</h1>
                 <div className="decoration"></div>
                 <ul className="select-fundation">
-                    <li onClick={this.onClickFund} key={'fund'}>Fundacjom</li>
-                    <li onClick={this.onClickFund} key={'org'}>Organizacom pozarządowym</li>
-                    <li onClick={this.onClickFund} key={'local'}>Lokalnym zbiórkom</li>
+                    <li onClick={this.onClickFund} id={'fund'} style={this.state.orgSelect==='fund'?{border: '1px solid black'}:null}>Fundacjom</li>
+                    <li onClick={this.onClickFund} id={'org'} style={this.state.orgSelect==='org'?{border: '1px solid black'}:null}>Organizacjom pozarządowym</li>
+                    <li onClick={this.onClickFund} id={'local'} style={this.state.orgSelect==='local'?{border: '1px solid black'}:null}>Lokalnym zbiórkom</li>
                 </ul>
-                <p>W nadzej bazie znajdziesz listę zwerifikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić
+                <p className='fundation-info'>W naszej bazie znajdziesz listę zwerifikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić
                     czym się zajmują, komu pomagają i czego potrzebują</p>
                 <ul className='org-list'>
                     {renderTodos}
