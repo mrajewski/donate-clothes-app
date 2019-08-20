@@ -1,4 +1,11 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Website created to help people donate their old stuff like clothes, toys, blankets to the right organizations.
+
+Using:
+React/JS
+Sass
+HTML/JSX
+
+
 
 ## Available Scripts
 
