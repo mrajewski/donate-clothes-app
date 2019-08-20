@@ -4,6 +4,23 @@ import React, {Component} from 'react';
 class Fundations extends Component {
 
     state = {
+        orgs: [
+            {
+                name: `Organizacja na rzecz powodzi`,
+                goal: 'Pomoc na rzecz rodzinom po powodziach',
+                items: 'ubrania, jedzenie, sprzęt AGD, meble, zabawki'
+            },
+            {
+                name: `Fundacja "Dla dzieci"`,
+                goal: 'Pomoc dzieciom z ubogich rodzin',
+                items: 'ubrania, meble, zabawki'
+            },
+            {
+                name: `Fundacja "Bez domu"`,
+                goal: 'Pomoc osobom bezdomnym',
+                items: 'ubrania, jedzenie, ciepłe koce'
+            }
+            ],
         funds: [
             {
                 name: `Fundacja "Dbam o zdrowie"`,
