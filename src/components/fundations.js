@@ -160,5 +160,4 @@ class Fundations extends Component {
     }
 
 }
-
 export default Fundations
